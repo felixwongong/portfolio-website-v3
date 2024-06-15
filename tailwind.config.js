@@ -11,7 +11,7 @@ module.exports = {
   ],
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["night", "autumn"],
+    themes: ["sunset", "garden"],
   },
   theme: {
     extend: {
@@ -32,7 +32,7 @@ module.exports = {
       // },
       fontFamily: {
         rain: ["rain"],
-        bungee: ["bungee"]
+        bungee: ["bungee"],
       },
       cursor: {
         key: "url(./dist/cur/key.svg), pointer",
@@ -48,4 +48,4 @@ module.exports = {
   },
 
   darkMode: "class", // or 'media' or 'class'
-}
+};

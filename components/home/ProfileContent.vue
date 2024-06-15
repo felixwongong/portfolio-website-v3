@@ -9,8 +9,9 @@
       <h3 class="text-primary-dark">...and a programmer who loves learning</h3>
     </div>
     <NuxtLink
-      to="/"
+      to="/work"
       class="btn bg-neutral hover:shadow-md transition-shadow hover:bg-neutral"
-      ><div class="text-neutral-content">My Work</div></NuxtLink >
+      ><div class="text-neutral-content">My Work</div></NuxtLink
+    >
   </div>
 </template>

@@ -12,7 +12,6 @@
       <p>Big ACGs fans, Love watching Vtubers, a Nousagi and a 35P</p>
       <p>Hobbiest heavylifter and guitarist</p>
     </TitledSection>
-    <TitledSection title="Journey" class="h-full"> </TitledSection>
     <HomePortal />
   </section>
 </template>

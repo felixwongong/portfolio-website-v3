@@ -30,6 +30,6 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ["kontra"],
+    transpile: ["kontra", "daisyui"],
   },
 });

@@ -1,0 +1,20 @@
+<template>
+  <div
+    class="flex flex-col justify-around md:items-start items-center md:space-y-0 space-y-10"
+  >
+    <div>
+      <h3 class="text-primary-dark text-2xl font-extrabold">
+        A Game Developer, and Web Developer
+      </h3>
+      <h3 class="text-primary-dark">...and a student who loves learning</h3>
+    </div>
+    <NuxtLink
+      to="/"
+      class="btn bg-blue hover:shadow-md transition-shadow"
+      >My Work</NuxtLink >
+  </div>
+</template>
+
+<script>
+export default {};
+</script>

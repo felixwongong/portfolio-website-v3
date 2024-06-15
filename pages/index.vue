@@ -13,6 +13,6 @@
       <p>Hobbiest heavylifter and guitarist</p>
     </TitledSection>
     <TitledSection title="Journey" class="h-full"> </TitledSection>
-    <Portal />
+    <HomePortal />
   </section>
 </template>

@@ -35,8 +35,8 @@
   </TitledSection>
 </template>
 <script>
-import TitledSection from "./TitledSection.vue";
+import TitledSection from "../TitledSection.vue";
 export default {
-  components: {TitledSection}
-}
+  components: { TitledSection },
+};
 </script>

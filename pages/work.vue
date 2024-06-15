@@ -5,24 +5,22 @@
       title="Works"
       class="text-primary-dark tracking-wide font-semibold text-lg"
     >
-      <Container
-        width="max-w-screen-sm"
-        class="flex flex-row justify-evenly flex-wrap gap-x-6 gap-y-14"
-      >
-        <div class="card w-96 glass" v-for="work in workData" :key="work.id">
+      <div class="w-full flex flex-row flex-wrap gap-x-8">
+        <div class="card w-80 glass" v-for="work in workData" :key="work.id">
           <figure>
-            <img :src="work.imageUrl" alt="car!" />
+            <img :src="work.imageUrl" alt="workImage" class="w-full" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">{{ work.name }}</h2>
             <p>{{ work.shortDescription }}</p>
             <div class="card-actions justify-end">
-              <button class="btn btn-primary">Play Now!</button>
+              <nuxt-link :to="work.link" class="btn btn-primary"
+                >Play Now!</nuxt-link
+              >
             </div>
           </div>
         </div>
-      </Container>
-      <WorkTimeline />
+      </div>
     </TitledSection>
   </section>
 </template>

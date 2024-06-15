@@ -26,15 +26,11 @@
 </template>
 
 <script>
-import Card from "@/components/util/Card.vue";
-import ImageContainer from "@/components/util/ImageContainer.vue";
 
+import Card from "./Card.vue";
 export default {
   name: "WorkCard",
-  components: {
-    Card,
-    ImageContainer,
-  },
+  components: {Card},
   props: {
     id: {
       require: true,

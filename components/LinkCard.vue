@@ -1,11 +1,11 @@
 <template>
   <Card
-    class="w-max my-2 py-2 px-5 text-primary-dark tracking-wide font-semibold link-card"
+    class="w-max my-2 py-2 px-5 tracking-wide font-semibold link-card border-secondary"
     id=""
     @mouseover="cardHover = true"
     @mouseleave="cardHover = false"
   >
-    <div :class="{ anim_spin: cardHover }">
+    <div :class="{ 'animate-bounce': cardHover }">
       <i class="fa-2x" :class="fa"></i>
     </div>
     <div class="w-10"></div>
@@ -41,12 +41,5 @@ export default {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.anim_spin {
-  animation-name: spin;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 </style>

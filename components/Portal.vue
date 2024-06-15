@@ -1,5 +1,5 @@
 <template>
-  <TSection title="Portal">
+  <TitledSection title="Portal">
     <div class="flex flex-row flex-wrap md:w-3/4">
       <LinkCard
         fa="fab fa-github"
@@ -32,14 +32,11 @@
         hrefInfo="Game Development CV"
       />
     </div>
-  </TSection>
+  </TitledSection>
 </template>
 <script>
-import LinkCard from "@/components/util/LinkCard.vue";
-import TSection from "@/components/util/TitledSection.vue";
-
+import TitledSection from "./TitledSection.vue";
 export default {
-  name: "Portal",
-  components: { LinkCard, TSection },
-};
+  components: {TitledSection}
+}
 </script>

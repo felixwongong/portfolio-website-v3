@@ -1,7 +1,7 @@
 <template>
   <Container class="flex flex-col-reverse md:flex-row justify-between">
-    <ProfileContent />
+    <HomeProfileContent />
     <div class="py-6 md:hidden"></div>
-    <ProfileCard />
+    <HomeProfileCard />
   </Container>
 </template>

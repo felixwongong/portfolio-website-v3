@@ -6,15 +6,11 @@
       <h3 class="text-primary-dark text-2xl font-extrabold">
         A Game Developer, and Web Developer
       </h3>
-      <h3 class="text-primary-dark">...and a student who loves learning</h3>
+      <h3 class="text-primary-dark">...and a programmer who loves learning</h3>
     </div>
     <NuxtLink
       to="/"
-      class="btn bg-blue hover:shadow-md transition-shadow"
-      >My Work</NuxtLink >
+      class="btn bg-neutral hover:shadow-md transition-shadow hover:bg-neutral"
+      ><div class="text-neutral-content">My Work</div></NuxtLink >
   </div>
 </template>
-
-<script>
-export default {};
-</script>

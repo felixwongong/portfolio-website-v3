@@ -1,13 +1,8 @@
 <template>
-$END$
+  <div class="transition ease-in-out font-rain">
+    <Header />
+    <Hero />
+    <slot />
+    <Footer />
+  </div>
 </template>
-
-<script>
-export default {
-name: "default"
-}
-</script>
-
-<style scoped>
-
-</style>

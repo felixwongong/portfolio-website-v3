@@ -1,0 +1,37 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+    font-family: "rain";
+    src: url("../font/AYearWithoutRain.woff2") format("woff2"),
+    url("../font/AYearWithoutRain.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    font-stretch: extra-expanded;
+}
+
+
+@font-face {
+    font-family: "bungee";
+    src: url("../font/BungeeSpice-Regular.ttf") format("ttf");
+}
+
+@layer components {
+    .text-primary-dark {
+        @apply font-rain;
+    }
+    .title {
+        @apply font-rain text-2xl font-extrabold border-b-4 border-dashed border-neutral inline-block;
+    }
+    .overlay {
+        @apply w-full h-full absolute opacity-0 hover:opacity-90 transition-opacity;
+    }
+    .btn {
+        @apply font-rain font-bold py-1 px-2 rounded-lg border-dashed border-2;
+    }
+}
+

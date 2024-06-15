@@ -5,7 +5,7 @@
       title="Works"
       class="text-primary-dark tracking-wide font-semibold text-lg"
     >
-      <div class="w-full flex flex-row flex-wrap gap-x-8">
+      <div class="w-full flex flex-row flex-wrap gap-x-8 gap-y-10">
         <div class="card w-80 glass" v-for="work in workData" :key="work.id">
           <figure>
             <img :src="work.imageUrl" alt="workImage" class="w-full" />

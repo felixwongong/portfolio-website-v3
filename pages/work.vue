@@ -28,7 +28,5 @@
 <script setup>
 import { ref } from "vue";
 import workJson from "~/assets/devdata/works.json";
-
 const workData = ref(workJson);
-console.log(workData.value);
 </script>

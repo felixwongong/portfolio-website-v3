@@ -55,7 +55,7 @@
       <ul class="menu menu-horizontal px-1">
         <li>
           <NuxtLink
-            to="/"
+            to="/work"
             class="py-0.5 border-transparent border-b-2 hover:border-gray-600"
             >Work
           </NuxtLink>

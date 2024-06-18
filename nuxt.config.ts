@@ -34,4 +34,12 @@ export default defineNuxtConfig({
   build: {
     transpile: ["kontra", "daisyui"],
   },
+  runtimeConfig: {
+    FIREBASE_API_KEY: "null", 
+    FIREBASE_AUTH_DOMAIN: "null",
+    FIREBASE_PROJECT_ID: "null",
+    FIREBASE_STORAGE_BUCKET: "null",
+    FIREBASE_MESSAGING_SENDER_ID: "null",
+    FIREBASE_APP_ID: "null",
+  }
 });

@@ -2,7 +2,13 @@ import { inject } from "@vercel/analytics";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   css: [
     "~/assets/css/main.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
@@ -33,5 +39,14 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ["kontra", "daisyui"],
+  },
+  runtimeConfig: {
+    FIREBASE_API_KEY: "null",
+    FIREBASE_AUTH_DOMAIN: "null",
+    FIREBASE_PROJECT_ID: "null",
+    FIREBASE_STORAGE_BUCKET: "null",
+    FIREBASE_MESSAGING_SENDER_ID: "null",
+    FIREBASE_APP_ID: "null",
+    FIREBASE_MEASUREMENT_ID: "null",
   },
 });

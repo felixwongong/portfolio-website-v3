@@ -6,7 +6,7 @@
       class="text-primary-dark tracking-wide font-semibold text-lg"
     >
       <div class="w-full flex flex-row flex-wrap gap-x-8 gap-y-10">
-        <div class="card w-80 glass" v-for="work in workData" :key="work.id">
+        <div class="card w-80 glass" v-for="work in data.works" :key="work.id">
           <figure>
             <img :src="work.imageUrl" alt="workImage" class="w-full" />
           </figure>
@@ -26,7 +26,5 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import workJson from "~/assets/devdata/works.json";
-const workData = ref(workJson);
+const { data } = await useFetch("/api/works");
 </script>

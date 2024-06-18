@@ -24,6 +24,7 @@ export default defineNuxtConfig({
           crossorigin: "anonymous",
           referrerpolicy: "no-referrer",
         },
+        { rel: "icon", type: "image/x-icon", href: "favicon.ico" },
       ],
     },
   },

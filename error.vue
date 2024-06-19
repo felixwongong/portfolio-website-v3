@@ -1,11 +1,16 @@
 <template>
-    <NuxtLayout>
-        error {{ characterState }}
-    </NuxtLayout>
+  <NuxtLayout>
+    <Tile :content="error.statusMessage" />
+  </NuxtLayout>
 </template>
 
-<script setup>
-const {characterState, setState} = useCharacterState();
+<script setup lang="ts">
+import type { NuxtError } from "#app";
+const { characterState, setState } = useCharacterState();
 
-setState("Walk")
+const props = defineProps({
+  error: Object as () => NuxtError,
+});
+
+setState("Sit");
 </script>

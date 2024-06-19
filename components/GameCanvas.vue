@@ -5,38 +5,52 @@
 <script>
 import { init, loadImage, SpriteSheet } from "kontra";
 import { Sprite, GameLoop } from "kontra";
-import playerSprite from "~/assets/player.png";
+import walkSprite from "~/assets/cat/spritesheet.png";
 
+var state;
 export default {
+  setup() {
+    const { characterState } = useCharacterState();
+    state = characterState;
+  },
   mounted() {
+    let player;
     let { canvas } = init("gameCanvas");
-    loadImage(playerSprite).then(function (image) {
-      let spriteSheet = SpriteSheet({
+    loadImage(walkSprite).then(function (image) {
+      let walkSheet = SpriteSheet({
         image: image,
-        frameWidth: 24, // Adjust based on your spritesheet frame size
-        frameHeight: 24, // Adjust based on your spritesheet frame size
+        frameWidth: 40,
+        frameHeight: 40,
         animations: {
-          // Define animations
-          walkRight: {
-            frames: "4..9", // Example frames, adjust according to your sheet
-            frameRate: 7,
+          Walk: {
+            frames: "0..7",
+            frameRate: 8,
           },
-          // Add more animations as needed
+          Dead: {
+            frames: "8..15",
+            frameRate: 8,
+            loop: false,
+          },
+          Sit: {
+            frames: "16..23",
+            frameRate: 8,
+          },
         },
       });
-      let player = Sprite({
+      player = Sprite({
         height: canvas.height / 4,
         width: canvas.width / 8,
-        animations: spriteSheet.animations,
+        animations: walkSheet.animations,
         anchor: { x: 0.5, y: 0.5 },
         x: canvas.width / 2,
         y: canvas.height / 1.5,
       });
 
+      player.context.canvas.classList.add("pixelate");
+
       let loop = GameLoop({
         update: function () {
-          // Example of changing animation based on interaction or time
-          player.playAnimation("walkRight");
+          player.playAnimation(state.value);
           player.update();
         },
         render: function () {

@@ -1,6 +1,7 @@
 <template>
+  <img src=/>
   <section>
-    <Tile content="I make games, and cute web🕸️ (❁´◡`❁)" />
+    <Tile content="I make games, and cute web🕸️ (❁´◡`❁)"/>
     <HomeProfile />
     <TitledSection
       title="About Me"

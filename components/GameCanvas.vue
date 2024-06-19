@@ -5,29 +5,35 @@
 <script>
 import { init, loadImage, SpriteSheet } from "kontra";
 import { Sprite, GameLoop } from "kontra";
-import playerSprite from "~/assets/player.png";
+import walkSprite from "~/assets/cat/cat01_walk_strip8.png";
+import ImageContainer from "./ImageContainer.vue";
 
+var state;
 export default {
+  setup() {
+    const {characterState} = useCharacterState();
+    state = characterState;
+  },
   mounted() {
     let { canvas } = init("gameCanvas");
-    loadImage(playerSprite).then(function (image) {
-      let spriteSheet = SpriteSheet({
+    loadImage(walkSprite).then(function (image) {
+      image.imageSmoothingEnabled = false;
+      image.classList.add("pixelate");
+      let walkSheet = SpriteSheet({
         image: image,
-        frameWidth: 24, // Adjust based on your spritesheet frame size
-        frameHeight: 24, // Adjust based on your spritesheet frame size
+        frameWidth: 40,
+        frameHeight: 40,
         animations: {
-          // Define animations
           walkRight: {
-            frames: "4..9", // Example frames, adjust according to your sheet
-            frameRate: 7,
+            frames: "0..7",
+            frameRate: 8,
           },
-          // Add more animations as needed
         },
       });
       let player = Sprite({
         height: canvas.height / 4,
         width: canvas.width / 8,
-        animations: spriteSheet.animations,
+        animations: walkSheet.animations,
         anchor: { x: 0.5, y: 0.5 },
         x: canvas.width / 2,
         y: canvas.height / 1.5,
@@ -36,7 +42,8 @@ export default {
       let loop = GameLoop({
         update: function () {
           // Example of changing animation based on interaction or time
-          player.playAnimation("walkRight");
+          console.log(state.value)
+          player.playAnimation(state.value == "Walk" ? "walkRight": "dead");
           player.update();
         },
         render: function () {

@@ -33,5 +33,11 @@
     .btn {
         @apply font-rain font-bold py-1 px-2 rounded-lg border-dashed border-2;
     }
+    
+.pixelate {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
+
+}

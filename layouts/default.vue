@@ -1,5 +1,6 @@
 <template>
   <SpeedInsights />
+  <NuxtLoadingIndicator :throttle="0" />
   <div class="transition ease-in-out font-rain">
     <Header />
     <Hero />

@@ -38,4 +38,14 @@
 
 <script setup>
 const { data } = await useFetch("/api/works");
+
+const initial = ref({
+  y: 100,
+  opacity: 0,
+});
+
+const enter = ref({
+  y: 0,
+  opacity: 1,
+});
 </script>

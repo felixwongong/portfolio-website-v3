@@ -44,8 +44,13 @@ module.exports = {
       backgroundImage: {
         coffee: "url('/dist/img/coffee.gif')",
       },
+      invert: {
+        25: ".25",
+        50: ".5",
+        75: ".75",
+      },
     },
   },
 
-  darkMode: "class", // or 'media' or 'class'
+  darkMode: ["class", '[data-theme="sunset"]'], // or 'media' or 'class'
 };

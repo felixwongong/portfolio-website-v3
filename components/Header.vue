@@ -44,7 +44,7 @@
         <div class="w-8">
           <img
             src="/img/coffee.gif"
-            class="object object-scale-down my-auto"
+            class="object object-scale-down my-auto dark:invert-[.75]"
             alt=""
           />
         </div>

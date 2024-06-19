@@ -10,13 +10,24 @@
           <figure>
             <img :src="work.imageUrl" alt="workImage" class="w-full" />
           </figure>
-          <div class="card-body">
+          <div class="card-body pt-4">
+            <div class="w-full">
+              <span
+                class="badge badge-outline badge-secondary mr-2"
+                v-for="s in work.Stack"
+                :key="s"
+              >
+                {{ s }}
+              </span>
+            </div>
             <h2 class="card-title">{{ work.name }}</h2>
             <p>{{ work.shortDescription }}</p>
             <div class="card-actions justify-end">
-              <nuxt-link :to="work.link" class="btn btn-primary"
-                >Play Now!</nuxt-link
-              >
+              <div class="tooltip tooltip-top" :data-tip="work.status">
+                <nuxt-link :to="work.link" class="btn btn-primary">{{
+                  work.linkName
+                }}</nuxt-link>
+              </div>
             </div>
           </div>
         </div>

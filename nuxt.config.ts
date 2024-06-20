@@ -36,6 +36,12 @@ export default defineNuxtConfig({
     global: true,
     dirs: ["~/components"],
   },
+  imports: {
+    dirs: [
+      "composables",
+      "composables/**/kontra"
+    ]
+  },
   modules: ["@vueuse/motion/nuxt"],
   postcss: {
     plugins: {

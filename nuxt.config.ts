@@ -27,11 +27,16 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/x-icon", href: "favicon.ico" },
       ],
     },
+    pageTransition: {
+      name: "page",
+      mode: "out-in",
+    },
   },
   components: {
     global: true,
     dirs: ["~/components"],
   },
+  modules: ["@vueuse/motion/nuxt"],
   postcss: {
     plugins: {
       tailwindcss: {},

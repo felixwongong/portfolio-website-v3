@@ -1,0 +1,19 @@
+{
+    "frameWidth": 40,
+    "frameHeight": 40,
+    "animations": {
+        "Walk": {
+            "frames": "0..7",
+            "frameRate": 8
+        },
+        "Dead": {
+            "frames": "8..15",
+            "frameRate": 8,
+            "loop": false
+        },
+        "Sit": {
+            "frames": "16..23",
+            "frameRate": 8
+        }
+    }
+}

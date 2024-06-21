@@ -6,6 +6,7 @@
 import { init, loadImage, SpriteSheet } from "kontra";
 import { Sprite, GameLoop } from "kontra";
 import walkSprite from "~/assets/cat/spritesheet.png";
+import config from "~/assets/cat/config.json";
 
 var state;
 export default {
@@ -16,27 +17,8 @@ export default {
   mounted() {
     let player;
     let { canvas } = init("gameCanvas");
-    loadImage(walkSprite).then(function (image) {
-      let walkSheet = SpriteSheet({
-        image: image,
-        frameWidth: 40,
-        frameHeight: 40,
-        animations: {
-          Walk: {
-            frames: "0..7",
-            frameRate: 8,
-          },
-          Dead: {
-            frames: "8..15",
-            frameRate: 8,
-            loop: false,
-          },
-          Sit: {
-            frames: "16..23",
-            frameRate: 8,
-          },
-        },
-      });
+
+    useSpriteSheet(walkSprite, config).then(function (walkSheet) {
       player = Sprite({
         height: canvas.height / 4,
         width: canvas.width / 8,

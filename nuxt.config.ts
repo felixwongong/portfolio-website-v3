@@ -29,7 +29,12 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["composables", "composables/**/kontra"],
   },
-  modules: ["@vueuse/motion/nuxt", "@vesp/nuxt-fontawesome", "@nuxt/image"],
+  modules: [
+    "@vueuse/motion/nuxt",
+    "@vesp/nuxt-fontawesome",
+    "@nuxt/image",
+    "@nuxtjs/mdc"
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},

@@ -33,9 +33,9 @@
           </li>
           <li>
             <NuxtLink
-              to="/"
+              to="/blog"
               class="border-transparent border-b-2 hover:border-gray-600"
-              >Post</NuxtLink
+              >Blog</NuxtLink
             >
           </li>
         </ul>
@@ -64,7 +64,7 @@
           <NuxtLink
             to="/"
             class="py-0.5 border-transparent border-b-2 hover:border-gray-600"
-            >Post</NuxtLink
+            >Blog</NuxtLink
           >
         </li>
       </ul>

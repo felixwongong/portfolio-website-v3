@@ -1,9 +1,19 @@
 <template>
   <section>
     <Tile content="Showcase🔥🔥" />
+
+    <div v-if="pending">
+      <div class="flex flex-col items-center">
+        <img class="pixelate w-40" :src="catJump" />
+        <div>Loading</div>
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
+    </div>
     <TitledSection
+      v-else
       title="Works"
       class="text-primary-dark tracking-wide font-semibold text-lg"
+      v-motion="{ initial: initial, enter: enter }"
     >
       <div class="w-full flex flex-row flex-wrap gap-x-8 gap-y-10">
         <div class="card w-80 glass" v-for="work in data.works" :key="work.id">
@@ -37,7 +47,8 @@
 </template>
 
 <script setup>
-const { data } = await useFetch("/api/works");
+const { pending, data: data } = await useLazyFetch("/api/works");
+import catJump from "~/assets/cat/jump.gif";
 
 const initial = ref({
   y: 100,

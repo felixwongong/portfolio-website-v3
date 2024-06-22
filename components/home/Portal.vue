@@ -27,32 +27,32 @@
 <script setup>
 const links = ref([
   {
-    fa: "fab fa-github",
+    fa: ["fab", "github"],
     href: "https://github.com/felixwongong",
     hrefInfo: "All the project repo",
   },
   {
-    fa: "fab fa-instagram",
+    fa: ["fab", "instagram"],
     href: "https://www.instagram.com/cofylife/",
     hrefInfo: "Come and check my post!",
   },
   {
-    fa: "fab fa-youtube",
+    fa: ["fab", "youtube"],
     href: "https://www.youtube.com/channel/UCA09RZ_b5ojSlr-5Jnvw3iA",
     hrefInfo: "Some random videos",
   },
   {
-    fa: "fab fa-itch-io",
+    fa: ["fab", "itch-io"],
     href: "https://yuenlfelix.itch.io/",
     hrefInfo: "My Games",
   },
   {
-    fa: "fab fa-node-js",
+    fa: ["fab", "node-js"],
     href: "https://cofy.dev/web-cv",
     hrefInfo: "Web Development CV",
   },
   {
-    fa: "fa-regular fa-hand-lizard",
+    fa: ["fas", "hand-lizard"],
     href: "https://cofy.dev/game-cv",
     hrefInfo: "Game Development CV",
   },

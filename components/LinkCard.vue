@@ -6,7 +6,7 @@
     @mouseleave="cardHover = false"
   >
     <div :class="{ 'animate-bounce': cardHover }">
-      <i class="fa-2x" :class="fa"></i>
+      <font-awesome class="fa-2x" :icon="fa" />
     </div>
     <div class="w-10"></div>
     <a :href="href" target="_blank" class="my-auto">{{ hrefInfo }}</a>

@@ -48,7 +48,7 @@ const links = ref([
   },
   {
     fa: ["fab", "linkedin"],
-    href: "https://yuenlfelix.itch.io/",
+    href: "https://www.linkedin.com/in/felix-wong-8a48911b6/",
     hrefInfo: "My Linkedin",
   },
   // {

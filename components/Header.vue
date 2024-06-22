@@ -42,7 +42,7 @@
       </div>
       <NuxtLink to="/" class="font-bold btn btn-ghost text-xl rounded-md">
         <div class="w-8">
-          <img
+          <NuxtImg
             src="/img/coffee.gif"
             class="object object-scale-down my-auto dark:invert-[.75]"
             alt=""

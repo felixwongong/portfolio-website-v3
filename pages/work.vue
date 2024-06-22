@@ -3,11 +3,7 @@
     <Tile content="Showcase🔥🔥" />
 
     <div v-if="pending">
-      <div class="flex flex-col items-center">
-        <NuxtImg class="pixelate w-40" :src="catJump" />
-        <div>Loading</div>
-        <span class="loading loading-bars loading-lg"></span>
-      </div>
+      <LoadingCat />
     </div>
     <TitledSection
       v-else
@@ -48,7 +44,6 @@
 
 <script setup>
 const { pending, data: data } = await useLazyFetch("/api/works");
-import catJump from "~/assets/cat/jump.gif";
 
 const initial = ref({
   y: 100,

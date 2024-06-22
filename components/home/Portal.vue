@@ -47,14 +47,19 @@ const links = ref([
     hrefInfo: "My Games",
   },
   {
-    fa: ["fab", "node-js"],
-    href: "https://cofy.dev/web-cv",
-    hrefInfo: "Web Development CV",
+    fa: ["fab", "linkedin"],
+    href: "https://yuenlfelix.itch.io/",
+    hrefInfo: "My Linkedin",
   },
-  {
-    fa: ["fas", "hand-lizard"],
-    href: "https://cofy.dev/game-cv",
-    hrefInfo: "Game Development CV",
-  },
+  // {
+  //   fa: ["fab", "node-js"],
+  //   href: "https://cofy.dev/web-cv",
+  //   hrefInfo: "Web Development CV",
+  // },
+  // {
+  //   fa: ["fas", "hand-lizard"],
+  //   href: "https://cofy.dev/game-cv",
+  //   hrefInfo: "Game Development CV",
+  // },
 ]);
 </script>

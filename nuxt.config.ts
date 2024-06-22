@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@vesp/nuxt-fontawesome",
     "@nuxt/image",
-    "@nuxtjs/mdc"
+    "@nuxtjs/mdc",
   ],
   postcss: {
     plugins: {
@@ -44,7 +44,14 @@ export default defineNuxtConfig({
   fontawesome: {
     icons: {
       solid: ["hand-lizard"],
-      brands: ["github", "instagram", "youtube", "itch-io", "node-js"],
+      brands: [
+        "github",
+        "instagram",
+        "youtube",
+        "itch-io",
+        "node-js",
+        "linkedin",
+      ],
     },
   },
   build: {

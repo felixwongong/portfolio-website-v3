@@ -1,5 +1,3 @@
-import { inject } from "@vercel/analytics";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: {
@@ -9,10 +7,12 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+
   css: [
     "~/assets/css/main.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
+
   app: {
     head: {
       link: [{ rel: "icon", type: "image/x-icon", href: "favicon.ico" }],
@@ -22,25 +22,30 @@ export default defineNuxtConfig({
       mode: "out-in",
     },
   },
+
   components: {
     global: true,
     dirs: ["~/components"],
   },
+
   imports: {
     dirs: ["composables", "composables/**/kontra"],
   },
+
   modules: [
     "@vueuse/motion/nuxt",
     "@vesp/nuxt-fontawesome",
     "@nuxt/image",
     "@nuxtjs/mdc",
   ],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   fontawesome: {
     icons: {
       solid: ["hand-lizard"],
@@ -54,9 +59,11 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   build: {
     transpile: ["kontra", "daisyui"],
   },
+
   runtimeConfig: {
     FIREBASE_API_KEY: "null",
     FIREBASE_AUTH_DOMAIN: "null",
@@ -66,4 +73,6 @@ export default defineNuxtConfig({
     FIREBASE_APP_ID: "null",
     FIREBASE_MEASUREMENT_ID: "null",
   },
+
+  compatibilityDate: "2024-08-19",
 });

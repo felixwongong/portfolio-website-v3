@@ -8,7 +8,7 @@
         class="text-primary-dark font-bold text-lg antialiased flex flex-row items-center dark:bg-darkSecondary px-2 rounded-md"
       >
         <div class="w-8">
-          <img
+          <NuxtImg
             src="/img/coffee.gif"
             class="object object-scale-down my-auto dark:invert-[.75]"
           />

@@ -1,8 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-export default function () {
-  var config = useRuntimeConfig();
+export default function (event) {
+  var config = useRuntimeConfig(event);
   const firebaseConfig = {
     apiKey: config.FIREBASE_API_KEY,
 

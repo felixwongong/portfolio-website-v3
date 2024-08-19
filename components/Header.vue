@@ -33,16 +33,16 @@
           </li>
           <li>
             <NuxtLink
-              to="/"
+              to="/blog"
               class="border-transparent border-b-2 hover:border-gray-600"
-              >Post</NuxtLink
+              >Blog</NuxtLink
             >
           </li>
         </ul>
       </div>
       <NuxtLink to="/" class="font-bold btn btn-ghost text-xl rounded-md">
         <div class="w-8">
-          <img
+          <NuxtImg
             src="/img/coffee.gif"
             class="object object-scale-down my-auto dark:invert-[.75]"
             alt=""
@@ -64,7 +64,7 @@
           <NuxtLink
             to="/"
             class="py-0.5 border-transparent border-b-2 hover:border-gray-600"
-            >Post</NuxtLink
+            >Blog</NuxtLink
           >
         </li>
       </ul>

@@ -25,7 +25,10 @@ export default function (event) {
 
   console.log("app initialized");
 
-  const db = initializeFirestore(app, { experimentalForceLongPolling: true });
+  const db = initializeFirestore(app, {
+    experimentalForceLongPolling: true,
+    useFetchStreams: false,
+  });
 
   console.log(db);
 

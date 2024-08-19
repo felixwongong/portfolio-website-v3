@@ -4,19 +4,19 @@ import { getFirestore } from "firebase/firestore";
 export default function () {
   var config = useRuntimeConfig();
   const firebaseConfig = {
-    apiKey: config.FIREBASE_API_KEY,
+    apiKey: config.PUBLIC_FIREBASE_API_KEY,
 
-    authDomain: config.FIREBASE_AUTH_DOMAIN,
+    authDomain: config.PUBLIC_FIREBASE_AUTH_DOMAIN,
 
-    projectId: config.FIREBASE_PROJECT_ID,
+    projectId: config.PUBLIC_FIREBASE_PROJECT_ID,
 
-    storageBucket: config.FIREBASE_STORAGE_BUCKET,
+    storageBucket: config.PUBLIC_FIREBASE_STORAGE_BUCKET,
 
-    messagingSenderId: config.FIREBASE_MESSAGING_SENDER_ID,
+    messagingSenderId: config.PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
 
-    appId: config.FIREBASE_APP_ID,
+    appId: config.PUBLIC_FIREBASE_APP_ID,
 
-    measurementId: config.FIREBASE_MEASUREMENT_ID,
+    measurementId: config.PUBLIC_FIREBASE_MEASUREMENT_ID,
   };
 
   const app = initializeApp(firebaseConfig);

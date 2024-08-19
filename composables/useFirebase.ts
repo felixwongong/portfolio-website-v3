@@ -19,6 +19,8 @@ export default function (event) {
     measurementId: config.FIREBASE_MEASUREMENT_ID,
   };
 
+  console.log(firebaseConfig);
+
   const app = initializeApp(firebaseConfig);
 
   const db = getFirestore(app);

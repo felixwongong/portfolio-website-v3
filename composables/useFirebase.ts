@@ -1,27 +1,33 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { initializeFirestore } from "firebase/firestore";
 
 export default function (event) {
   var config = useRuntimeConfig(event);
   const firebaseConfig = {
-    apiKey: config.FIREBASE_API_KEY,
+    apiKey: config.public.FIREBASE_API_KEY,
 
-    authDomain: config.FIREBASE_AUTH_DOMAIN,
+    authDomain: config.public.FIREBASE_AUTH_DOMAIN,
 
-    projectId: config.FIREBASE_PROJECT_ID,
+    projectId: config.public.FIREBASE_PROJECT_ID,
 
-    storageBucket: config.FIREBASE_STORAGE_BUCKET,
+    storageBucket: config.public.FIREBASE_STORAGE_BUCKET,
 
-    messagingSenderId: config.FIREBASE_MESSAGING_SENDER_ID,
+    messagingSenderId: config.public.FIREBASE_MESSAGING_SENDER_ID,
 
-    appId: config.FIREBASE_APP_ID,
+    appId: config.public.FIREBASE_APP_ID,
 
-    measurementId: config.FIREBASE_MEASUREMENT_ID,
+    measurementId: config.public.FIREBASE_MEASUREMENT_ID,
   };
+
+  console.log(firebaseConfig);
 
   const app = initializeApp(firebaseConfig);
 
-  const db = getFirestore(app);
+  console.log("app initialized");
+
+  const db = initializeFirestore(app, { experimentalForceLongPolling: true });
+
+  console.log(db);
 
   return { db };
 }

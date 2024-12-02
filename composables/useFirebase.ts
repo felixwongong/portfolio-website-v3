@@ -19,15 +19,9 @@ export default function (event) {
     measurementId: config.public.FIREBASE_MEASUREMENT_ID,
   };
 
-  console.log(firebaseConfig);
-
   const app = initializeApp(firebaseConfig);
 
-  console.log("app initialized");
-
   const db = initializeFirestore(app, { experimentalForceLongPolling: true });
-
-  console.log(db);
 
   return { db };
 }
